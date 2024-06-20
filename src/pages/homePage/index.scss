@@ -1,0 +1,33 @@
+.home-content-wrapper{
+  .search-bar-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .evaluation-box{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .evaluation-item{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: $contentPadding;
+      .icon{
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background: $greyestColor;
+      }
+    }
+  }
+  .home-content-advertising {
+    padding: $contentPadding;
+    .adv-list{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

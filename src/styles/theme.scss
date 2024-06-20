@@ -1,0 +1,95 @@
+/**
+ * 变量样式
+ */
+$mainColor: #54418f; /* 主色0b8df4 */
+$baseFontColor: #595959; /* 默认字色(正文、常规字色) */
+$strongFontColor: #262626; /* 加深字色(标题、主要字色) */
+$subFontColor: #8c8c8c; /* 辅助字色(描述、次要字色) */
+$disableFontColor: #bfbfbf; /* 禁用、占位文字 */
+$baseLinkColor: #0b8df4; /* link字体颜色 */
+
+$baseBorderColor: #ededed; /* 默认边框颜色 */
+$baseLineColor: #f0f0f0; /* 分割线颜色 */
+$baseBackColor: #ededed; /* 默认背景颜色 */
+
+$warningColor: #ff6c1a; /* 提醒 */
+$errorColor: #ff3838; /* 错误、禁用 */
+$successColor: #54b523; /* 成功色 */
+
+
+$mainColorDarkerCode: 0d2940;
+$mainColorDarkCode: 273655;
+$mainColorCode: 4d648d;
+$whiteColorCode: FFFFFF;
+$blueColorCode: 4d648d; //2d6a9a
+$yellowColorCode: FAA855;
+$greenColorCode: 75c639;
+
+$mainColorDarker: #0d2940;
+$mainColorDark: #273655;
+$mainColor: #4d648d;
+
+$blueColor: $mainColor; //#2d6a9a
+$redColor: #ff5b74;
+$lightBlueColor: #2fa0b0; //TODOricky check remove?
+$coolerBlueColor: #5585ff;
+$coolerBlueColorTransparent: rgba(85, 133, 255, 0.5);
+$warmerRedColor: #ff5b74;
+$warmerRedColorTransparent: rgba(255, 91, 116, 0.5);
+$normalTempColor: #ffd191;
+$normalTempColorTransparent: rgba(255, 209, 145, 0.5);
+$noTempColor: #2fd38e;
+$noTempColorTransparent: rgba(47, 211, 142, 0.5);
+$yellowColor: #ffa500; //old code #faa855
+$greenColor: #75c639;
+$yellowGreenColor: #dadc73;
+$whiteColor: #ffffff;
+$greyestColor: #626262;
+$greyerColor: #afafaf;
+$greyColor: #c4c4c4;
+$lightGreyColor: #f4f3f0;
+$blueGreyColor: #edf2f7;
+$bg: #e2e8f0;
+
+$whiteLayerColor: rgba(255, 255, 255, 0.4);
+$whiterLayerColor: rgba(255, 255, 255, 0.8);
+$darkLayerColor: rgba(0, 0, 0, 0.1);
+$darkerLayerColor: rgba(98, 98, 98, 0.72);
+
+$disabledOp: 0.6;
+$focusShadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+
+$inputColor: $mainColorDarker;
+
+$ctrlPrimaryColor: $mainColor;
+$ctrlBgColor: $greyColor;
+
+$commonRadius: 12px;
+$btnBorderWidth: 0.2rem;
+$btnBorderWidthThin: 1px;
+
+$btnPadH: 0.375rem;
+$btnPadV: 0.75rem;
+
+$scrollBarWidth: 3px;
+$sliderBtnSize: 1.3rem;
+$dotSize: 1.5rem;
+
+$dividerColor: $greyerColor;
+$lightDividerColor: #dadada;
+$dividerWidth: 1px;
+$dividerWidthThick: 2px;
+
+$headerShift: 3rem;
+
+$loginCardWidth: 26rem;
+
+$contentMargin: 12px;
+$contentPadding: 12px;
+
+$mainHeaderHeight: 4.5rem;
+
+
+/*iphone X系列底部间距 */
+$ipxMedia: 'only screen and (min-height:804px) and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2), only screen and (min-height:720px) and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3), only screen and (min-height:804px) and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)';
+

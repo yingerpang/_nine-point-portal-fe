@@ -1,0 +1,265 @@
+@import "variables";
+/*********************************************************************************
+  with the base font-size = calc(10px + min(0.7vmin, 10px)) and a 1440x1024 screen,
+  here are the eqivalent size in px for these classes
+
+  for font:
+  smallest = 12.0176px
+  smaller = 13.7344px
+  small = 15.4512px
+  normal = 17.168px
+  big = 20.6016px
+  bigger = 24.0352px
+  biggest = 27.4688px
+
+  padding/margin:
+  ps-05 ms-05 = 2.146px
+  ps-1 ms-1 = 4.292px
+  ps-15 ms-15 = 6.438px
+  ps-2 ms-2 = 8.584px
+  ps-25 ms-25 = 12.876px
+  ps-3 ms-3 = 17.168px
+  ps-35 ms-35 = 21.460px
+  ps-4 ms-4 = 25.752px
+  ps-45 ms-45 = 34.336px
+  ps-5 ms-5 = 51.504px
+  ps-55 ms-55 = 68.672px
+  ps-6 ms-6 = 85.840px
+
+**********************************************************************************/
+/*flex布局*/
+@mixin flex($justify-content: center, $align-items: center, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+/* 单行文本*/
+@mixin singleText() {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* 多行文本*/
+@mixin multiText($line) {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-all;
+}
+/* 0.5px border
+* 父元素需要添加 position: relative;
+ */
+@mixin borderZeroPointFive(
+  $left: 0,
+  $bottom: 0,
+  $width: 100%,
+  $borderColor: $baseBorderColor
+) {
+  content: ' ';
+  position: absolute;
+  left: $left;
+  bottom: $bottom;
+  width: $width;
+  height: 1px;
+  background-color: $borderColor;
+  transform: scaleY(0.5);
+}
+
+@mixin light {
+  font-weight: 300;
+}
+@mixin bold {
+  font-weight: 600;
+}
+
+@mixin big {
+  font-size: 1.2rem !important;
+}
+@mixin bigger {
+  font-size: 1.4rem !important;
+}
+@mixin biggest {
+  font-size: 1.6rem !important;
+}
+@mixin normal {
+  font-size: 1rem !important;
+}
+@mixin normalWeak {
+  font-size: 1rem;
+}
+@mixin small {
+  font-size: 16px !important;
+}
+@mixin smaller {
+  font-size: 12px !important;
+}
+@mixin smallest {
+  font-size: 10px !important;
+}
+
+
+.big {
+  @include big;
+}
+
+.bigger {
+  @include bigger;
+}
+
+.biggest {
+  @include biggest;
+}
+
+.normal {
+  @include normal;
+}
+
+.small {
+  @include small;
+}
+
+.smaller {
+  @include smaller;
+}
+
+.smallest {
+  @include smallest;
+}
+
+.bold {
+  @include bold;
+}
+
+.light {
+  @include light;
+}
+.singleText{
+  @include singleText();
+}
+.domRadius{
+  border-radius: $commonRadius !important;
+}
+.inputFont {
+  color: $inputColor !important;
+}
+.greyFont {
+  color: $greyColor !important;
+}
+.greyerFont {
+  color: $greyerColor !important;
+}
+.greyestFont {
+  color: $greyestColor !important;
+}
+.whiteFont {
+  color: $whiteColor !important;
+}
+.whiteBg {
+  background: $whiteColor !important;
+}
+.transparentFont {
+  color: transparent !important;
+}
+.coolerBlueFont {
+  color: $coolerBlueColor !important;
+}
+.lightBlueFont {
+  color: $lightBlueColor !important;
+}
+.greenFont {
+  color: $greenColor !important;
+}
+.redFont {
+  color: $redColor !important;
+}
+.warmerRedFont {
+  color: $warmerRedColor !important;
+}
+.yellowFont {
+  color: $yellowColor !important;
+}
+.mainFont {
+  color: $mainColor !important;
+}
+
+.dom-mt {
+  margin-top: $contentMargin;
+}
+.dom-mb {
+  margin-bottom: $contentMargin;
+}
+.dom-ml {
+  margin-left: $contentMargin;
+}
+.dom-mr {
+  margin-right: $contentMargin;
+}
+.dom-m-all{
+  margin: $contentMargin;
+}
+.dom-pt {
+  padding-top: $contentMargin;
+}
+.dom-pb {
+  padding-bottom: $contentPadding;
+}
+.dom-pl {
+  padding-left: $contentPadding;
+}
+.dom-pr {
+  padding-right: $contentPadding;
+}
+.dom-p-all{
+  padding: $contentPadding;
+}
+.icon.vip {
+  @include vipImage;
+}
+
+.icon{
+  width: 32px;
+  height: 32px;
+  background-size: contain;
+}
+
+svg {
+  &.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+    font-size: 16px;
+    svg:not(:root) {
+      overflow: hidden;
+    }
+  }
+}
+
+.no-data {
+  margin-top: 10vh;
+  @include flex();
+  img {
+    width: 80vw;
+  }
+}
+.nine-point-common-pb {
+  padding-bottom: 62px;
+}
+
+/* iPhone X系列底部加高 */
+@media #{$ipxMedia} {
+  .nine-point-common-pb {
+    padding-bottom: calc(62px + 34px) !important;
+  }
+}
+@media #{$ipxMedia} {
+  .tabbar-pb {
+    padding-bottom: 34px !important;
+  }
+}
+
+

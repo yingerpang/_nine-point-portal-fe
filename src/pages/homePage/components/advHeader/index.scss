@@ -1,0 +1,9 @@
+.adv-item-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .title-box{
+    display: flex;
+    align-items: baseline;
+  }
+}

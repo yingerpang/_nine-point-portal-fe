@@ -1,0 +1,10 @@
+.category-content-wrapper{
+  display: flex;
+  overflow: hidden;
+  .cate-menu {
+    width:auto;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}

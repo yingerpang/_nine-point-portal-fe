@@ -1,0 +1,37 @@
+.recommend-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  .recommend-detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .recommend-item-title{
+    width: 95%;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      border-top-left-radius:6px;
+      border-top-right-radius:6px;
+    }
+    .title {
+      display: inline-block;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .5);
+      span{
+        padding: 4px;
+      };
+    }
+    .icon{
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+}
